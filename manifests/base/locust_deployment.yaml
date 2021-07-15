@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: locust-primary
+  name: locust-primary-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locust-primary
+  template:
+    metadata:
+      labels:
+        app: locust-primary
+    spec:
+      containers: # pull custom image which is based on locust image
+      - image: aaronarellano/locust-kind
+        imagePullPolicy: Always
+        name: locust-primary
+        args:
+          - -f
+          - locustfile.py
+          - --master
+        ports:
+        - containerPort: 8089
+          name: locust-ui

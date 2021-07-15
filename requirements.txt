@@ -1,0 +1,4 @@
+# add other dependancies here for more development on top of locust
+flask==1.1.4
+urllib3==1.25.0
+requests==2.25.0
