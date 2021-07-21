@@ -1,7 +1,7 @@
 # locust-kind
 
 ### This repo is a basic k8s deployment of [locust](https://locust.io/)
-The repo was created to deploy a master node of locust locally using a kind cluster and docker desktop. Refer to the locust documentation if you wish to deploy locust worker nodes and scale out the cluster resources to increase load testing resources. Additions in the `src/` directory are there to learn more about the load testing tool, it is meant to be lightweight for experimentation of locust.
+The repo was created to deploy a single node of locust locally using a kind cluster and docker desktop. Refer to the locust documentation if you wish to deploy locust in [distributed mode](https://docs.locust.io/en/stable/quickstart.html#more-options) and scale out the cluster resources to increase load testing resources. Additions in the `locust` directory are there to learn more about the load testing tool, it is meant to be lightweight for experimentation of locust.
 
 ## Requirements for this repo:
 - [Chocolatey](https://chocolatey.org/) (Windows package manager)
