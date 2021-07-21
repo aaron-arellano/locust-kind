@@ -6,3 +6,6 @@ RUN pip install -r requirements.txt
 
 WORKDIR /locust/src
 COPY . /locust
+
+# validations part of build
+RUN black . --check

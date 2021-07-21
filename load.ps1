@@ -1,14 +1,17 @@
 <# End to end creation of cluster to port-forwarding service for locust 
  # on a kind cluster.
  #>
-# create kind clustter
-$healthCheck = kubectl get nodes
-if (!$healthCheck) {
+# create kind cluster
+kubectl get nodes
+if (!$?) {
     kind create cluster
 }
 
-# build the docker image and push to docker hub
+# build the docker image, if there is an issue than exit the scrip
 docker build . -t aaronarellano/locust-kind
+if (!$?) {
+    exit
+}
 docker push aaronarellano/locust-kind
 
 # deploy manifests to kind cluster 
