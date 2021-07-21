@@ -1,4 +1,12 @@
 # add other dependancies here for more development on top of locust
-flask==1.1.4
 urllib3==1.25.0
 requests==2.25.0
+locust==1.6.0 #added here as we use a python imag as base
+
+# testing
+pytest==6.2.0
+pytest-lazy-fixture==0.6.0
+codecov==2.1.10
+
+# styling
+black==21.4b0
