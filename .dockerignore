@@ -2,3 +2,4 @@ manifests/
 load.ps1
 *.md
 .git/
+**/*.pyc

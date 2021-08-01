@@ -4,8 +4,11 @@ FROM python:3.8
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-WORKDIR /locust/src
-COPY . /locust
+WORKDIR /locust-kind
+COPY . /locust-kind
 
 # validations part of build
 RUN black . --check
+
+#needed to load locust file
+WORKDIR /locust-kind/locust
