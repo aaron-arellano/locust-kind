@@ -1,6 +1,6 @@
 # main file
 from locust import User, task, between, events
-from web import github_page
+from webpage import github_page
 
 
 class MyUser(User):

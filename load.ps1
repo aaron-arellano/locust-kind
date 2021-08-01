@@ -14,6 +14,8 @@ if (!$?) {
 }
 docker push aaronarellano/locust-kind
 
+# added for rolling update of docker image
+kubectl delete deployment/locust-primary-dep -n locust
 # deploy manifests to kind cluster 
 kubectl apply -k manifests/base
 # wait for resources to populate
